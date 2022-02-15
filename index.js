@@ -10,7 +10,7 @@ const app = Express();
 const PORT = process.env.PORT;
 
 app.use(bodyParser.json())
-app.post('/', toDoListRouter);
+app.use('/', toDoListRouter);
 
 app.listen(PORT, () => console.log(`runing app on port ${PORT}!`));
 app.use(error);
