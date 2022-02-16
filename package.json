@@ -20,7 +20,10 @@
   "homepage": "https://github.com/Dayvid-Ruan/toDoList#readme",
   "dependencies": {
     "body-parser": "^1.19.1",
-    "express": "^4.17.2"
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "joi": "^17.6.0",
+    "mongodb": "^4.3.1"
   },
   "devDependencies": {
     "eslint": "^8.9.0",
