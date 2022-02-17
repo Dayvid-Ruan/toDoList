@@ -1,9 +1,9 @@
 const connection = require('./connection');
 
-const createToDoList = async (task) => {
+const createToDoList = async (task, status) => {
   const conn = await connection();
-  const create = await conn.collection('tasks').insertOne({ task });
-  return create;
+  await conn.collection('tasks').insertOne(task, status);
+  return { task, status };
 }
 
 module.exports = {

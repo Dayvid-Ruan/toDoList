@@ -8,7 +8,7 @@ const validateTask = JOI.object({
   task: JOI.string().required(),
 });
 
-const updateToDoList = async (id, task) => {
+const updateToDoList = async (id, task, status) => {
   if (!ObjectId.isValid(id)) {
     const err = { status: 400, message: 'Wrong id format' };
     throw err;
@@ -27,7 +27,7 @@ const updateToDoList = async (id, task) => {
     throw err;
   }
 
-  const update = await updateToDoListModels(id, task);
+  const update = await updateToDoListModels(id, task, status);
   return update;
 };
 
